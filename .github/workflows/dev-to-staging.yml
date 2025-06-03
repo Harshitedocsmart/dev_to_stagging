@@ -48,3 +48,9 @@ jobs:
         target_branch: staging
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Trigger Webhook After Deployment
+      run: |
+        curl -X POST https://4606-2401-4900-1f3f-8ee0-28ec-b90f-574a-847c.ngrok-free.app/webhook1 \
+          -H "Content-Type: application/json" \
+          -d '{"status": "deployed", "image": "${{ secrets.DOCKER_USERNAME }}/my-django-api:latest"}'
