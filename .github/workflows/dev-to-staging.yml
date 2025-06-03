@@ -23,7 +23,7 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run Tests
-      run: python dev_2_stagging/manage.py test
+      run: python dev_2_stagging/myproject/manage.py test
 
     - name: Log in to DockerHub
       uses: docker/login-action@v2
