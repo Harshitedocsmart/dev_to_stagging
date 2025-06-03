@@ -11,7 +11,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Set PYTHONPATH so Python knows where to find the project
-ENV PYTHONPATH=/app
+ENV PYTHONPATH=/app 
 
 # Run the Django development server
 CMD ["python", "dev_2_stagging/myproject/manage.py", "runserver", "0.0.0.0:8000"]
